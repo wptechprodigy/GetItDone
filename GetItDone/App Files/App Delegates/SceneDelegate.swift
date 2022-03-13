@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let rootViewController = ViewController()
+        let rootViewController = TasksListViewController()
         rootViewController.navigationItem.title = "Get It Done"
         
         let navigationController = UINavigationController(rootViewController: rootViewController)
