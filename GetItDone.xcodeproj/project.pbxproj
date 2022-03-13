@@ -12,6 +12,9 @@
 		049B4C7727DDEA57004D05E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B4C7627DDEA57004D05E7 /* Assets.xcassets */; };
 		049B4C7A27DDEA57004D05E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049B4C7827DDEA57004D05E7 /* LaunchScreen.storyboard */; };
 		049B4C8827DDF2DB004D05E7 /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B4C8727DDF2DB004D05E7 /* TasksListViewController.swift */; };
+		049B4C8E27DDF712004D05E7 /* GetItDone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 049B4C8C27DDF712004D05E7 /* GetItDone.xcdatamodeld */; };
+		049B4C9027DDF94C004D05E7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B4C8F27DDF94C004D05E7 /* CoreDataManager.swift */; };
+		049B4C9527DE0D2D004D05E7 /* CoreDataManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B4C9427DE0D2D004D05E7 /* CoreDataManager+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		049B4C7927DDEA57004D05E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049B4C7B27DDEA57004D05E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049B4C8727DDF2DB004D05E7 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
+		049B4C8D27DDF712004D05E7 /* GetItDone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetItDone.xcdatamodel; sourceTree = "<group>"; };
+		049B4C8F27DDF94C004D05E7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		049B4C9427DE0D2D004D05E7 /* CoreDataManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 		049B4C6C27DDEA54004D05E7 /* GetItDone */ = {
 			isa = PBXGroup;
 			children = (
-				049B4C8627DDF285004D05E7 /* Tasks */,
-				049B4C8527DDF278004D05E7 /* Database */,
 				049B4C8127DDEDEF004D05E7 /* App Files */,
+				049B4C8627DDF285004D05E7 /* Tasks */,
+				049B4C8B27DDF630004D05E7 /* TaskItems */,
+				049B4C8A27DDF60F004D05E7 /* Generic Classes */,
+				049B4C8927DDF5FF004D05E7 /* Common */,
+				049B4C8527DDF278004D05E7 /* Database */,
 				049B4C8427DDF22A004D05E7 /* Storyboards */,
 			);
 			path = GetItDone;
@@ -100,6 +109,9 @@
 		049B4C8527DDF278004D05E7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				049B4C9127DE02B1004D05E7 /* Extensions */,
+				049B4C8C27DDF712004D05E7 /* GetItDone.xcdatamodeld */,
+				049B4C8F27DDF94C004D05E7 /* CoreDataManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -110,6 +122,35 @@
 				049B4C8727DDF2DB004D05E7 /* TasksListViewController.swift */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		049B4C8927DDF5FF004D05E7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		049B4C8A27DDF60F004D05E7 /* Generic Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Generic Classes";
+			sourceTree = "<group>";
+		};
+		049B4C8B27DDF630004D05E7 /* TaskItems */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TaskItems;
+			sourceTree = "<group>";
+		};
+		049B4C9127DE02B1004D05E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				049B4C9427DE0D2D004D05E7 /* CoreDataManager+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				049B4C6E27DDEA54004D05E7 /* AppDelegate.swift in Sources */,
+				049B4C8E27DDF712004D05E7 /* GetItDone.xcdatamodeld in Sources */,
+				049B4C9527DE0D2D004D05E7 /* CoreDataManager+Extensions.swift in Sources */,
 				049B4C8827DDF2DB004D05E7 /* TasksListViewController.swift in Sources */,
+				049B4C9027DDF94C004D05E7 /* CoreDataManager.swift in Sources */,
 				049B4C7027DDEA54004D05E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +440,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		049B4C8C27DDF712004D05E7 /* GetItDone.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				049B4C8D27DDF712004D05E7 /* GetItDone.xcdatamodel */,
+			);
+			currentVersion = 049B4C8D27DDF712004D05E7 /* GetItDone.xcdatamodel */;
+			path = GetItDone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 049B4C6227DDEA54004D05E7 /* Project object */;
 }
