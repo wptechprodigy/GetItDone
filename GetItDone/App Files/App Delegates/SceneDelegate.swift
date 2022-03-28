@@ -15,9 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let rootViewController = TasksListViewController()
+        let coreDataManager: CoreDataManager = CoreDataManager.shared
+        let rootViewController = TasksListViewController(manager: coreDataManager)
         let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.navigationBar.topItem?.title = "Get It Done"
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
